@@ -8,6 +8,12 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #999999;
+  text-align: left;
 }
 
 html {
@@ -21,45 +27,63 @@ p {
 /* TRANSITION */
 a,
 .btn {
-  transition: all 300ms ease;
+  transition: 0.3s all ease;
 }
 
 /* NAV */
-
-nav,
+.navbar-light {
+  background: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.navbar {
+  padding: 0.9rem 1.5rem;
+}
+.navbar,
 .nav-links {
   display: flex;
-}
-
-nav {
-  justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  justify-content: space-between;
 }
 
 .nav-links {
-  gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
-}
-
-a {
-  color: black;
+  gap: 2rem;
   text-decoration: none;
-  text-decoration-color: white;
 }
-a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+.navbar-light .navbar-brand {
+  color: #000000;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
-
-.logo {
-  font-size: 2rem;
+.navbar-brand {
+  font-weight: 900;
+  font-size: 26px;
+  position: relative;
+  z-index: 0;
 }
-.logo:hover {
-  cursor: default;
+.navbar-brand::after {
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background: #3e64ff;
+  z-index: -1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.navbar-brand span {
+  color: #fff;
 }
 
 /* HAMBURGER */
@@ -132,7 +156,7 @@ a:hover {
 /* SECTION */
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 95vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;

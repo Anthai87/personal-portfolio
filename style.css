@@ -40,6 +40,16 @@ h5,
   color: black;
   font-weight: 400;
 }
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
 
 li {
   display: list-item;
@@ -268,11 +278,6 @@ section {
   font-size: 60px;
   font-weight: 800;
 }
-@media (max-width: 767.98px) {
-  .slider-text h1 {
-    font-size: 40px;
-  }
-}
 
 .slider-text h2 {
   font-weight: 800;
@@ -383,6 +388,11 @@ section {
   margin-right: -15px;
   margin-left: -15px;
 }
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
 .justify-content-center {
   -webkit-box-pack: center !important;
   -ms-flex-pack: center !important;
@@ -446,26 +456,107 @@ section {
   gap: 1rem;
 }
 
-/* ABOUT SECTION */
-
-.img {
+.img,
+.blog-img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
-
-.row {
-  flex-wrap: wrap;
-}
-
-.d-flex {
-  display: flex !important;
-}
-
 .d-flex {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.ftco-no-pt {
+  padding-top: 0 !important;
+}
+
+.ftco-no-pb {
+  padding-bottom: 0 !important;
+}
+
+.ftco-section {
+  padding: 7em 0;
+  position: relative;
+}
+
+.ftco-about .img-about {
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+.ftco-about .img-about .img {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.align-items-stretch {
+  -webkit-box-align: stretch !important;
+  -ms-flex-align: stretch !important;
+  align-items: stretch !important;
+}
+
+.align-self-stretch {
+  -ms-flex-item-align: stretch !important;
+  -ms-grid-row-align: stretch !important;
+  align-self: stretch !important;
+}
+
+.pb-5,
+.py-5 {
+  padding-bottom: 3rem !important;
+}
+.pb-3,
+.py-3 {
+  padding-bottom: 1rem !important;
+}
+
+.justify-content-start {
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+}
+
+.heading-section {
+  position: relative;
+}
+
+.heading-section .subheading {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 3px;
+}
+.heading-section h1.big {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  font-size: 7vw;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  font-weight: 900;
+}
+.heading-section h1.big.big-2 {
+  right: 0;
+}
+.heading-section h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.heading-section h2 span {
+  font-weight: 400;
 }
 
 /* EXPERIENCE SECTION */

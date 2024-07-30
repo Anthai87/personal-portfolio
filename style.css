@@ -45,25 +45,11 @@ p {
   margin-bottom: 1rem;
 }
 
-address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit;
-}
-
 li {
   display: list-item;
 }
 section {
   display: block;
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /* NAV */
@@ -228,21 +214,7 @@ section {
   transform: none;
 }
 
-/* SECTION 
-
-
-
-.section-container {
-  display: flex;
-}
-
-
-*/
-
 /* PROFILE SECTION */
-section {
-  display: block;
-}
 
 .hero-wrap {
   width: 100%;
@@ -379,6 +351,7 @@ section {
   color: #3e64ff;
   font-size: 30px;
 }
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,6 +366,7 @@ section {
   margin-right: 0;
   margin-left: 0;
 }
+
 .justify-content-center {
   -webkit-box-pack: center !important;
   -ms-flex-pack: center !important;
@@ -404,17 +378,32 @@ section {
   -ms-flex-align: center !important;
   align-items: center !important;
 }
+
+.align-items-stretch {
+  -webkit-box-align: stretch !important;
+  -ms-flex-align: stretch !important;
+  align-items: stretch !important;
+}
 .text-center {
   text-align: center !important;
 }
 
-/* ICONS */
+.align-self-stretch {
+  -ms-flex-item-align: stretch !important;
+  -ms-grid-row-align: stretch !important;
+  align-self: stretch !important;
+}
+
+/*
+
+ICONS
+
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
+ BUTTONS 
 .btn-container {
   display: flex;
   justify-content: center;
@@ -452,93 +441,50 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
+*/
+
+/* About Me*/
+
+.container {
+  max-width: 960px;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.img,
-.blog-img {
+.ftco-section {
+  padding: 3.84em 0;
+  position: relative;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
-.d-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
 
-.ftco-no-pt {
-  padding-top: 0 !important;
-}
-
-.ftco-no-pb {
-  padding-bottom: 0 !important;
-}
-
-.ftco-section {
-  padding: 7em 0;
-  position: relative;
-}
-
-.ftco-about .img-about {
-  width: 100%;
-  z-index: 0;
-  position: relative;
-}
-.ftco-about .img-about .img {
-  display: block;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.align-items-center {
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-}
-
-.align-items-stretch {
-  -webkit-box-align: stretch !important;
-  -ms-flex-align: stretch !important;
-  align-items: stretch !important;
-}
-
-.align-self-stretch {
-  -ms-flex-item-align: stretch !important;
-  -ms-grid-row-align: stretch !important;
-  align-self: stretch !important;
-}
-
-.pb-5,
-.py-5 {
-  padding-bottom: 3rem !important;
-}
 .pb-3,
 .py-3 {
   padding-bottom: 1rem !important;
 }
 
-.justify-content-start {
-  -webkit-box-pack: start !important;
-  -ms-flex-pack: start !important;
-  justify-content: flex-start !important;
+.col-md-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .heading-section {
   position: relative;
 }
 
-.heading-section .subheading {
-  font-size: 13px;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  color: black;
-  letter-spacing: 3px;
-}
 .heading-section h1.big {
   position: absolute;
   top: 0px;
@@ -548,9 +494,7 @@ section {
   z-index: -1;
   font-weight: 900;
 }
-.heading-section h1.big.big-2 {
-  right: 0;
-}
+
 .heading-section h2 {
   font-size: 50px;
   font-weight: 700;
@@ -558,120 +502,83 @@ section {
 .heading-section h2 span {
   font-weight: 400;
 }
-
-/* EXPERIENCE SECTION */
-
-#experience {
-  position: relative;
+.mb-4 {
+  margin-bottom: 1.5rem !important;
 }
 
-.experience-sub-title {
-  color: rgb(85, 85, 85);
+.ftco-about ul.about-info {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.ftco-about ul.about-info li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.ftco-about ul.about-info li span {
+  width: calc(100% - 130px);
+}
+.ftco-about ul.about-info li span:first-child {
   font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
+  color: #000000;
+  width: 130px;
 }
 
-.experience-details-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
-.article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+.ftco-about .counter-wrap .text p {
+  font-size: 20px;
+}
+.ftco-about .counter-wrap .text p span {
+  font-weight: 400;
+  color: #000000;
+}
+.ftco-about .counter-wrap .text p span.number {
+  font-weight: 600;
+  color: #3e64ff;
 }
 
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+.btn {
+  cursor: pointer;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+.btn.btn-primary {
+  background: #3e64ff;
+  border: 1px solid #3e64ff !important;
+  color: #fff !important;
+}
+.btn.btn-primary:hover {
+  border: 1px solid #3e64ff !important;
+  background: #3e64ff !important;
+  color: #000000 !important;
 }
 
-article .icon {
-  cursor: default;
+.px-3 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
-/* PROJECTS SECTION */
-
-#projects {
-  position: relative;
-}
-
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-}
-
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
-}
-
-.project-title {
-  margin: 1rem;
-  color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-}
-
-/* CONTACT */
-
-#contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
-}
-
-.contact-info-upper-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
-}
-
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
-}
-
-.contact-info-container p {
-  font-size: larger;
-}
-
-.contact-icon {
-  cursor: default;
-}
-
-.email-icon {
-  height: 2.5rem;
-}
-
-/* FOOTER SECTION */
-
-footer {
-  height: 26vh;
-  margin: 0 1rem;
-}
-
-footer p {
-  text-align: center;
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
